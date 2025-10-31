@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Reset input and button defaults for consistent UI */
+@layer base {
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+
+  body {
+    @apply font-sans bg-white text-gray-900 dark:bg-brand-dark dark:text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+/* ✅ Custom components */
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+
+  /* Reusable card shadow for consistency */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-card hover:shadow-hover transition-shadow duration-300;
+  }
+
+  /* Smooth fade-in animation utility */
+  .fade-in {
+    @apply animate-fade-in;
+  }
+}
+
+/* ✅ Custom Animations */
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) infinite linear;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+/* ✅ Keyframes */
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 90%, to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+  30%, 60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+/* ✅ Optional: Stylish Scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffd643;
+  border-radius: 10px;
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+
+@layer base {
+  * {
+    @apply box-border max-w-full;
+  }
+
+  img, video {
+    @apply max-w-full h-auto;
+  }
+}
+}
