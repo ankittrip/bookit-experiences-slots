@@ -29,7 +29,7 @@ Live App	https://bookit-experiences-slots-ten.vercel.app/
 
 Frontend Repo	https://github.com/ankittrip/bookit-experiences-slots/frontend
 
-Backend Repo	https://github.com/ankittrip/bookit-experiences-slots/new/main?filename=README.mdbackend
+Backend Repo	https://github.com/ankittrip/bookit-experiences-slots/backend
 
 ✨ Key Features
 
