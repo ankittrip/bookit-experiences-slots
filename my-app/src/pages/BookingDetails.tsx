@@ -107,7 +107,7 @@ const BookingDetails: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center pt-24 px-4">
       <div className="relative max-w-3xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
-        
+
         {/* 🎟️ Ticket Header */}
         <div className="bg-gradient-to-r from-yellow-500 to-amber-600 text-white p-6 flex justify-between items-center">
           <div>
