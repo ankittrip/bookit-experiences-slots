@@ -19,6 +19,11 @@ app.get("/", (req, res) => {
   res.send("Running successfully:)");
 });
 
+// Health endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.use("/api/experiences", experienceRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/promo", promoRoutes);
